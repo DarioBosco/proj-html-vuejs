@@ -3,20 +3,20 @@
 		<div class="header-wrapper">
 			<div class="header-top">
 				<div class="logo">
-					<img src="https://avada.theme-fusion.com/bakery/wp-content/uploads/sites/124/2021/04/avada-bakery-logo.svg" alt="" />
+					<img :src="images.logo" alt="" />
 				</div>
 				<nav>
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Shop</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Gallery</a></li>
-						<li><a href="#">Locations</a></li>
-						<li><a href="#">Journal</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">My Account</a></li>
+						<li><a :href="links.home">Home</a></li>
+						<li><a :href="links.shop">Shop</a></li>
+						<li><a :href="links.about">About</a></li>
+						<li><a :href="links.gallery">Gallery</a></li>
+						<li><a :href="links.locations">Locations</a></li>
+						<li><a :href="links.journal">Journal</a></li>
+						<li><a :href="links.contact">Contact</a></li>
+						<li><a :href="links.account">My Account</a></li>
 						<li>
-							<a href="#"><i class="fas fa-shopping-cart"></i></a>
+							<a :href="links.cart"><i class="fas fa-shopping-cart"></i></a>
 						</li>
 					</ul>
 				</nav>
@@ -34,7 +34,28 @@
 	</header>
 </template>
 
-<script></script>
+<script>
+export default {
+	data() {
+		return {
+			images: {
+				logo: 'https://avada.theme-fusion.com/bakery/wp-content/uploads/sites/124/2021/04/avada-bakery-logo.svg',
+			},
+			links: {
+				home: '#',
+				shop: '#',
+				about: '#',
+				gallery: '#',
+				locations: '#',
+				journal: '#',
+				contact: '#',
+				acocunt: '#',
+				cart: '#',
+			},
+		};
+	},
+};
+</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
