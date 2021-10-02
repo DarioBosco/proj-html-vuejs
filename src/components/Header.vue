@@ -21,6 +21,15 @@
 					</ul>
 				</nav>
 			</div>
+			<div class="jumbotron container">
+				<div class="jumbotron-content">
+					<p>Fresh & Tasty bakery every day</p>
+					<h1>The Perfect Fresh Bread</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eius omnis, provident ducimus animi, quisquam velit et mollitia iusto aspernatur unde odio porro architecto, libero dolorem voluptatibus sed suscipit voluptate.</p>
+
+					<button>Explore our products</button>
+				</div>
+			</div>
 		</div>
 	</header>
 </template>
@@ -35,7 +44,6 @@
 header {
 	font-family: 'Work Sans';
 	.header-wrapper {
-		height: 500px;
 		background-image: url('../assets/img/hero-header-bakery.jpg');
 		background-size: cover;
 		background-position: top;
@@ -69,6 +77,40 @@ header {
 						}
 					}
 				}
+			}
+		}
+		.jumbotron-content {
+			width: 25%;
+			padding-top: 200px;
+			padding-bottom: 200px;
+
+			p {
+				color: $mamba;
+
+				&:first-child {
+					text-transform: uppercase;
+					font-size: 0.75rem;
+				}
+			}
+
+			h1 {
+				color: $daisyBush;
+				font-family: 'Source Serif Pro', sans-serif;
+				font-size: 3rem;
+			}
+
+			& * {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+
+			button {
+				font-family: 'Work Sans';
+				background-color: #fff;
+				border: none;
+				border-radius: 5px;
+				color: $daisyBush;
+				padding: 10px 20px;
 			}
 		}
 	}
