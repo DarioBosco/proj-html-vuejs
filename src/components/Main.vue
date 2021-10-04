@@ -1,15 +1,18 @@
 <template>
-	<main>
+	<main> 
 		<OurProducts />
+		<Wedding />
 	</main>
 </template>
 
 <script>
 import OurProducts from './OurProducts.vue';
+import Wedding from './Wedding.vue';
 
 export default {
 	components: {
 		OurProducts,
+		Wedding,
 	},
 };
 </script>
