@@ -183,6 +183,7 @@ footer {
 		margin: 100px 0;
 
 		.legal {
+			font-size: 0.7rem;
 			color: $tertiary;
 
 			a {
