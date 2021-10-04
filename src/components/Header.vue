@@ -89,12 +89,12 @@ header {
 						border-bottom: 2px solid transparent;
 
 						&:hover {
-							border-bottom: 2px solid $daisyBush;
+							border-bottom: 2px solid $primary;
 						}
 
 						a {
 							text-decoration: none;
-							color: $daisyBush;
+							color: $primary;
 						}
 					}
 				}
@@ -106,7 +106,7 @@ header {
 			padding-bottom: 200px;
 
 			p {
-				color: $mamba;
+				color: $tertiary;
 
 				&:first-child {
 					text-transform: uppercase;
@@ -115,7 +115,7 @@ header {
 			}
 
 			h1 {
-				color: $daisyBush;
+				color: $primary;
 				font-family: 'Source Serif Pro';
 				font-size: 3rem;
 			}
@@ -126,7 +126,7 @@ header {
 
 			button {
 				background-color: $white;
-				color: $daisyBush;
+				color: $primary;
 			}
 		}
 	}

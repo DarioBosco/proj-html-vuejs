@@ -6,15 +6,10 @@
 			<button>Start Shopping</button>
 		</div>
 		<div class="images-box">
-			<div class="arrows">
-				<div class="left">
+			<div class="image-box">
+				<div class="arrow left">
 					<i class="fas fa-chevron-left"></i>
 				</div>
-				<div class="right">
-					<i class="fas fa-chevron-right"></i>
-				</div>
-			</div>
-			<div class="image-box">
 				<div class="hoverlay">
 					<!-- Bellissimo nome per una classe del genere -->
 					<h2>Choco Chip Cookies</h2>
@@ -24,6 +19,9 @@
 				<img src="https://avada.theme-fusion.com/bakery/wp-content/uploads/sites/124/2019/11/choco-chip-cookies.jpg" alt="" />
 			</div>
 			<div class="image-box">
+				<div class="arrow right">
+					<i class="fas fa-chevron-right"></i>
+				</div>
 				<div class="hoverlay">
 					<!-- Bellissimo nome per una classe del genere -->
 					<h2>Strawberry Jam Cookies</h2>
@@ -66,13 +64,13 @@ export default {
 
 		h2 {
 			font-family: 'Source Serif Pro';
-			color: $daisyBush;
+			color: $primary;
 			padding-right: 20%;
 			font-size: 2rem;
 		}
 
 		button {
-			background-color: $daisyBush;
+			background-color: $primary;
 			color: $white;
 		}
 	}
@@ -85,21 +83,20 @@ export default {
 		justify-content: space-between;
 		position: relative;
 
-		.arrows {
-			position: absolute;
+		.arrow {
 			display: flex;
-			justify-content: space-between;
-			width: 100%;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 50%;
+			background-color: $secondary;
+			height: 80px;
+			width: 40px;
+			color: $white;
+		}
 
-			& * {
-				background-color: $perfume;
-				height: 80px;
-				width: 40px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				color: white;
-			}
+		.arrow.right {
+			right: 0;
 		}
 		.image-box {
 			width: calc(50% - 10px);
