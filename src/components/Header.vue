@@ -116,22 +116,17 @@ header {
 
 			h1 {
 				color: $daisyBush;
-				font-family: 'Source Serif Pro', sans-serif;
+				font-family: 'Source Serif Pro';
 				font-size: 3rem;
 			}
 
 			& * {
-				margin-top: 20px;
-				margin-bottom: 20px;
+				margin: 20px 0;
 			}
 
 			button {
-				font-family: 'Work Sans';
-				background-color: #fff;
-				border: none;
-				border-radius: 5px;
+				background-color: $white;
 				color: $daisyBush;
-				padding: 10px 20px;
 			}
 		}
 	}
