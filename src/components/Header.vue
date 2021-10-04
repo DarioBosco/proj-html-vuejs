@@ -49,7 +49,7 @@ export default {
 				locations: '#',
 				journal: '#',
 				contact: '#',
-				acocunt: '#',
+				account: '#',
 				cart: '#',
 			},
 		};
