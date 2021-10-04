@@ -22,7 +22,13 @@
 			</nav>
 			<div class="footer-bottom">
 				<div class="legal">&copy; Copyright 2012 - 2020 | Avada Theme by <a :href="links.legal.themeFusion">ThemeFusion</a>. | All rights reserved. | Powered by <a :href="links.legal.wordpress">Wordpress</a></div>
-				<div class="socials"></div>
+				<div class="socials">
+					<ul>
+						<li v-for="link in links.socials" :key="link">
+							<a :href="link.link"><i :class="link.iconPrefix + ' ' + link.icon"></i></a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -76,10 +82,26 @@ export default {
 					wordpress: 'https://www.wordpress.com',
 				},
 				socials: {
-					instagram: 'https://www.instagram.com/',
-					twitter: 'https://twitter.com/',
-					facebook: 'https://facebook.com/',
-					pinterest: 'https://pinterest.com/',
+					instagram: {
+						iconPrefix: 'fab',
+						icon: 'fa-instagram',
+						link: 'https://www.instagram.com/',
+					},
+					twitter: {
+						iconPrefix: 'fab',
+						icon: 'fa-twitter',
+						link: 'https://www.twitter.com/',
+					},
+					facebook: {
+						iconPrefix: 'fab',
+						icon: 'fa-facebook-f',
+						link: 'https://www.facebook.com/',
+					},
+					pinterest: {
+						iconPrefix: 'fab',
+						icon: 'fa-pinterest-p',
+						link: 'https://www.pinterest.com/',
+					},
 				},
 			},
 		};
@@ -150,6 +172,36 @@ footer {
 						line-height: 1.2rem;
 						text-align: center;
 						border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
+	.footer-bottom {
+		display: flex;
+		justify-content: space-between;
+		margin: 100px 0;
+
+		.legal {
+			color: $tertiary;
+
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+		.socials {
+			ul {
+				list-style: none;
+
+				li {
+					display: inline-block;
+					margin: 0 20px;
+					color: $primary;
+					font-size: 1.5rem;
+
+					a {
+						color: inherit;
 					}
 				}
 			}

@@ -86,6 +86,7 @@ export default {
 header {
 	font-family: 'Work Sans';
 	.header-wrapper {
+		height: 100vh;
 		background-image: url('../assets/img/hero-header-bakery.jpg');
 		background-size: cover;
 		background-position: top;
