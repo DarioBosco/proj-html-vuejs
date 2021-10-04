@@ -7,17 +7,12 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a :href="links.home">Home</a></li>
-						<li><a :href="links.shop">Shop</a></li>
-						<li><a :href="links.about">About</a></li>
-						<li><a :href="links.gallery">Gallery</a></li>
-						<li><a :href="links.locations">Locations</a></li>
-						<li><a :href="links.journal">Journal</a></li>
-						<li><a :href="links.contact">Contact</a></li>
-						<li><a :href="links.account">My Account</a></li>
-						<li>
-							<a :href="links.cart"><i class="fas fa-shopping-cart"></i></a>
-						</li>
+						<ul>
+							<li v-for="(link, index) in links.nav" :key="index">
+								<a v-if="link.name != 'Cart'" :href="link.link">{{ link.name }} </a>
+								<a v-else :href="link.link"><i class="fas fa-shopping-cart"></i></a>
+							</li>
+						</ul>
 					</ul>
 				</nav>
 			</div>
@@ -42,15 +37,41 @@ export default {
 				logo: 'https://avada.theme-fusion.com/bakery/wp-content/uploads/sites/124/2021/04/avada-bakery-logo.svg',
 			},
 			links: {
-				home: '#',
-				shop: '#',
-				about: '#',
-				gallery: '#',
-				locations: '#',
-				journal: '#',
-				contact: '#',
-				account: '#',
-				cart: '#',
+				nav: {
+					home: {
+						name: 'Home',
+						link: '#',
+					},
+					shop: {
+						name: 'Shop',
+						link: '#',
+					},
+					about: {
+						name: 'About',
+						link: '#',
+					},
+					gallery: {
+						name: 'Gallery',
+						link: '#',
+					},
+					locations: {
+						name: 'Locations',
+						link: '#',
+					},
+					journal: {
+						name: 'Journal',
+						link: '#',
+					},
+					contact: {
+						name: 'Contact',
+						link: '#',
+					},
+					cart: {
+						name: 'Cart',
+						link: '#',
+						amount: 0,
+					},
+				},
 			},
 		};
 	},
