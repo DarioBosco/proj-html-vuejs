@@ -89,10 +89,12 @@ export default {
 			justify-content: center;
 			position: absolute;
 			top: 50%;
+			transform: translateY(-50%);
 			background-color: $secondary;
 			height: 80px;
 			width: 40px;
 			color: $white;
+			z-index: 999;
 		}
 
 		.arrow.right {

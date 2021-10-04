@@ -5,6 +5,11 @@
 				<div class="logo">
 					<img :src="images.logo" alt="" />
 				</div>
+				<div class="newsletter">
+					<h2>Subscribe to our newsletter</h2>
+					<input type="text" name="email" id="email" placeholder="Enter email address" />
+					<button>Subscribe</button>
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -26,7 +31,7 @@ export default {
 				contact: '#',
 				orders: '#',
 				cart: '#',
-				allRightsReserved: '',
+				allRightsReserved: '#',
 				wordpress: '#',
 				instagram: '#',
 				twitter: '#',
@@ -44,6 +49,23 @@ export default {
 @import '../assets/styles/common';
 
 footer {
+	font-family: 'Work Sans';
 	padding-top: 100px;
+	.footer-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		h2 {
+			color: $primary;
+			font-family: 'Source Serif Pro';
+		}
+
+		input {
+			padding: 6px 10px;
+			border: 1px solid $tertiary;
+			border-radius: 3px;
+		}
+	}
 }
 </style>
