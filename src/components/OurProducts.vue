@@ -114,7 +114,7 @@ export default {
 				visibility: hidden;
 				opacity: 0;
 				transition: visibility 0s, opacity 0.5s linear;
-				color: white;
+				color: $white;
 				background: rgba(53, 49, 49, 0.671);
 				height: 100%;
 				width: 100%;

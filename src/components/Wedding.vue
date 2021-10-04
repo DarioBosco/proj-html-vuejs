@@ -82,7 +82,7 @@ export default {
 					visibility: hidden;
 					opacity: 0;
 					transition: visibility 0s, opacity 0.3s linear;
-					color: white;
+					color: $white;
 					height: 100%;
 					width: 100%;
 					background-size: cover;
